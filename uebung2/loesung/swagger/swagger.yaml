@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   description: API for evaluating coffee at QAware.
   version: 1.0.0
-  title: QAcoffee API
+  title: QAcoffee API - Swagger.yaml - Rookie Camp 2018 - Lösung
 host: 'localhost:8091'
 basePath: /
 tags:

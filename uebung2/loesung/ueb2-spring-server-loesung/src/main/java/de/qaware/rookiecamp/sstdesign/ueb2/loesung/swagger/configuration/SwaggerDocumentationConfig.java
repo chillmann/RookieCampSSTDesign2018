@@ -16,7 +16,7 @@ public class SwaggerDocumentationConfig {
 
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("QAcoffee API")
+            .title("QAcoffee API - Spring Server - Rookie Camp 2018")
             .description("API for evaluating coffee at QAware.")
             .version("1.0.0")
             .build();

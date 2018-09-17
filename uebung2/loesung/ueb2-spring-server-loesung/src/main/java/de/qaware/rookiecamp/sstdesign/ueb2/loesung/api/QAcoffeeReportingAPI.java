@@ -17,8 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class QAcoffeeReportingAPI {
 
-    @ApiOperation(value = "Create a new report upon all stored evaluations.", notes = "Created report is a calculated " +
-            "average for the numerical values and a summary (all comibined) for the remarks.")
+    @ApiOperation(value = "Create a new report upon all stored evaluations.", notes = "Created report is a list of all evaluations.")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Successful operation, may contain business errors.", response = ReportResponse.class),
             @ApiResponse(code = 500, message = "An internal error occurred, unable to process the request in a proper way.",
