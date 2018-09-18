@@ -1,6 +1,9 @@
 package de.qaware.rookiecamp.sstdesign.ueb2.vorgabe.api;
 
+import de.qaware.rookiecamp.sstdesign.ueb2.vorgabe.api.model.CoffeeDTO;
+import de.qaware.rookiecamp.sstdesign.ueb2.vorgabe.api.model.CreateEvaluationDto;
 import de.qaware.rookiecamp.sstdesign.ueb2.vorgabe.api.model.Errors;
+import de.qaware.rookiecamp.sstdesign.ueb2.vorgabe.api.model.EvaluationDto;
 import de.qaware.rookiecamp.sstdesign.ueb2.vorgabe.api.response.BooleanResponse;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -11,6 +14,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import java.util.List;
 
 
 @Api(value = "theAPI", description = "some description about this API", tags = {"someTag"})
@@ -34,5 +39,19 @@ public class QAcoffeeAPI {
         //-- just a delegate implmentation
         return new ResponseEntity<>(new BooleanResponse(Boolean.TRUE, null), HttpStatus.OK);
     }
+
+    @ApiOperation(value = "Returns coffee list.")
+    @RequestMapping(path = "/coffees", method = RequestMethod.GET)
+    public ResponseEntity<List<CoffeeDTO>> getCoffees() {
+        return null;
+    }
+
+    @ApiOperation(value = "omg")
+    @RequestMapping(path = "/evaluations", method = RequestMethod.POST)
+    public ResponseEntity<EvaluationDto> addEvaluation(CreateEvaluationDto createEvaluationDto) {
+        return null;
+    }
+
+
 
 }
