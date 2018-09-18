@@ -1,0 +1,20 @@
+Auswertung
+GET /reports
+200 OK
+
+res-body: ReportListDTO {
+	items: List<ReportDTO>
+}
+
+ReportDTO {
+	coffee: {
+		id: int,
+		timePeriod: {
+			start: date,
+			end: date
+		},
+	},
+	tasteAvg: double (0...1),
+	lookAvg: double (0...1),
+	remarks: List<string>
+}

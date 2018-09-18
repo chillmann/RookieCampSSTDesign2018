@@ -1,0 +1,18 @@
+Bewertung
+POST /evaluations
+201 Created
+
+req-body: EvaluationDTO
+{
+	coffee: {
+		id: int,
+		timePeriod: {
+			start: date,
+			end: date
+		},
+	},
+	beverageId: int,
+	taste: double (0...1),
+	look: double (0...1),
+	remarks: string
+}

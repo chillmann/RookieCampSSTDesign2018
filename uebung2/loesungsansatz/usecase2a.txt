@@ -1,0 +1,37 @@
+Getränk anlegen
+POST /beverages
+201 Created
+
+req-body: BeverageInputDTO {
+	name: string
+},
+
+res-body: BeverageDTO {
+	id: int,
+	name: string
+}
+
+Getränke abfragen
+GET /beverages?ids=1,2,3 (opt)
+200 OK
+
+res-body: BeverageListDTO {
+	items: List<BeverageDTO>
+}
+
+Getränk anpassen
+PATCH /beverages/{id}
+200 OK
+
+req-body: BeverageInputDTO {
+	name: string
+},
+
+res-body: BeverageDTO {
+	id: int,
+	name: string
+}
+
+Getränk löschen
+DELETE /beverages/{id}
+204 No content
